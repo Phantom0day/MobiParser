@@ -6,25 +6,25 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class PalmDatabase(
     @SerialName("name") val name: String,
-    @SerialName("attributes") val attributes: Int,
-    @SerialName("version") val version: Int,
-    @SerialName("creationDate") val creationDate: Long,
-    @SerialName("modificationDate") val modificationDate: Long,
-    @SerialName("lastBackupDate") val lastBackupDate: Long,
-    @SerialName("modificationNumber") val modificationNumber: Long,
-    @SerialName("appInfoID") val appInfoID: Long,
-    @SerialName("sortInfoID") val sortInfoID: Long,
+    @SerialName("attributes") val attributes: UShort,
+    @SerialName("version") val version: UShort,
+    @SerialName("creationDate") val creationDate: UInt,
+    @SerialName("modificationDate") val modificationDate: UInt,
+    @SerialName("lastBackupDate") val lastBackupDate: UInt,
+    @SerialName("modificationNumber") val modificationNumber: UInt,
+    @SerialName("appInfoID") val appInfoID: UInt,
+    @SerialName("sortInfoID") val sortInfoID: UInt,
     @SerialName("type") val type: String,
     @SerialName("creator") val creator: String,
-    @SerialName("uniqueIDSeed") val uniqueIDSeed: Long,
-    @SerialName("nextRecordListID") val nextRecordListID: Long,
-    @SerialName("numberOfRecords") val numberOfRecords: Int,
+    @SerialName("uniqueIDSeed") val uniqueIDSeed: UInt,
+    @SerialName("nextRecordListID") val nextRecordListID: UInt,
+    @SerialName("numberOfRecords") val numberOfRecords: UShort,
     @SerialName("recordInfoList") val recordInfoList: ArrayList<Record>,
 ) {
     @Serializable
     data class Record(
-        @SerialName("recordDataOffset") val recordDataOffset: Long,
-        @SerialName("recordAttributes") val recordAttributes: Byte,
-        @SerialName("uniqueID") val uniqueID: Long,
+        @SerialName("recordDataOffset") val recordDataOffset: UInt,
+        @SerialName("recordAttributes") val recordAttributes: UByte,
+        @SerialName("uniqueID") val uniqueID: Int,
     )
 }
