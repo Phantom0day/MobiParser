@@ -1,0 +1,20 @@
+[versions]
+plugin-android = "8.0.2"
+plugin-kotlin = "1.8.21"
+
+kotlinx-coroutines = "1.6.4"
+kotlinx-serialization = "1.5.0"
+napier = "2.6.1"
+multiplatform-settings = "1.0.0"
+[libraries]
+plugin-android = { module = "com.android.tools.build:gradle", version.ref = "plugin-android" }
+plugin-kotlin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "plugin-kotlin" }
+plugin-kotlin-serialization = { module = "org.jetbrains.kotlin:kotlin-serialization", version.ref = "plugin-kotlin" }
+
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinx-coroutines" }
+kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinx-coroutines" }
+kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinx-serialization" }
+napier = { module = "io.github.aakira:napier", version.ref = "napier" }
+multiplatform-settings = { module = "com.russhwolf:multiplatform-settings", version.ref = "multiplatform-settings" }
+[bundles]
+plugins = ["plugin-android", "plugin-kotlin", "plugin-kotlin-serialization"]

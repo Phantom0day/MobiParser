@@ -1,6 +1,7 @@
 plugins {
     kotlin("multiplatform")
     id("com.android.library")
+    kotlin("plugin.serialization")
 }
 
 @OptIn(org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi::class)
@@ -29,6 +30,15 @@ kotlin {
         val commonMain by getting {
             dependencies {
                 //put your multiplatform dependencies here
+
+                //Coroutines
+                implementation(libs.kotlinx.coroutines.core)
+                //Logger
+                implementation(libs.napier)
+                //JSON
+                implementation(libs.kotlinx.serialization.json)
+                //Key-Value storage
+                implementation(libs.multiplatform.settings)
             }
         }
         val commonTest by getting {
